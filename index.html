@@ -6,9 +6,62 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Abertura de Star Wars - HTML & CSS</title>
+        <link rel="stylesheet" href="css/starwars.css">
     </head>
     <body>
         
+        <article class="starwars">
+
+            <!--importando o audio de abertura do starwars-->
+            <audio preload="auto">
+                <source src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.ogg" type="audio/ogg" />
+                <source src="https://s.cdpn.io/1202/Star_Wars_original_opening_crawl_1977.mp3" type="audio/mpeg" />
+            </audio>
+
+            <!--tela de inicio -->
+            <section class="starwars-start">
+                <p>
+                    Iniciar <br> <span>Abertura Clássica do Star Wars</span> <br>
+                    de 1977 <br>
+                    <span>Releitura por Erick Moura</span>
+                </p>
+            </section>
+
+            <!--animaçao-->
+            <div class="starwars-animation">
+                <section class="starwars-intro">
+                    Há muito tempo, em uma galáxia muito,<br>muito distante...
+                </section>
+
+                <!--logo Star Wars-->
+                <section class="starwars-title">
+                    <div contenteditable="false" spellcheck="false">
+                        <h2>Episódio I - A Ameaça Fantasma</h2>
+
+                        <p>
+                            A desordem instalou-se na República Galática.
+                            A cobrança de impostos das rotas de comércio para sistemas remotos
+                            está sendo contestada.
+                        </p>
+
+                        <p>
+                            Esperando resolver a questão com um bloqueio de 
+                            poderosas naves de guerra, a gananciosa federação de comércio
+                            suspendeu toda remessa para o pequeno planeta Naboo.
+                        </p>
+
+                        <p>
+                            Equanto o Congresso da Reública discute indefinidamente essa
+                            alarmante sequência de eventos, o Chanceler supremo enviou, secretamente,
+                            dois Caveleiros Jedi, guardiões da paz e da justiça na galáxia, para porem
+                            fim ao conflito...
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </article>
+
         <!--JQuery-->
         <script src="js/jquery.min.js"></script>
     </body>
