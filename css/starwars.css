@@ -74,6 +74,12 @@ html, body{
     backface-visibility: hidden;
 }
 
+.starwars .starwars-start .btn-start{
+    background: none;
+    border: 1px solid #ff6;
+    border-radius: 5px;
+}
+
   @keyframes intro {
     0% {
       opacity: 0;
