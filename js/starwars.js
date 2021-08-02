@@ -1,29 +1,29 @@
 StarWars = (function(){
 
-    //construtor
+    // construtor
     function StarWars(args){
-        this.elementos = $(args.elementos);
+        this.elements = $(args.elements);
 
-        //tocando o audio da abertura
-        this.bgm = this.elementos.find('audio').get(0);
+        // playing opening soundtrack
+        this.bgm = this.elements.find('audio').get(0);
 
-        //iniciando a animação
-        this.iniciar = this.elementos.find('.starwars-start');
+        // starting animation
+        this.start = this.elements.find('.starwars-start');
 
-        //wrapper da animação
-        this.animacao = this.elementos.find('.starwars-animation');
+        // animation wrapper
+        this.animation = this.elements.find('.starwars-animation');
 
-        //remove a animação e mostra a tela de inicio
+        // removes animation and shows start screen
         this.reset();
 
-        //iniciar a animação ao clicar na tela de inicio
-        this.iniciar.bind('click', $.proxy(function(){
-            this.iniciar.hide();
+        // starting animation as we click on start button
+        this.start.bind('click', $.proxy(function(){
+            this.start.hide();
             this.bgm.play();
-            this.elementos.append(this.animacao);
+            this.elements.append(this.animation);
         }, this));
 
-        //reiniciar a animação e mostrar a tela de inicio
+        // restart animation and show start button
         $(this.bgm).bind('ended', $.proxy(function(){
             this.bgm.currentTime = 0;
             this.reset();
@@ -31,16 +31,16 @@ StarWars = (function(){
     }
 
     StarWars.prototype.reset = function(){
-        this.iniciar.show();
-        this.cloned = this.animacao.clone(true);
-        this.animacao.remove();
-        this.animacao = this.cloned;
+        this.start.show();
+        this.cloned = this.animation.clone(true);
+        this.animation.remove();
+        this.animation = this.cloned;
     };
 
     return StarWars;
 })();
 
-//instanciando a classe StarWars
+// star wars class instance
 new StarWars({
-    elementos: '.starwars'
+    elements: '.starwars'
 });
